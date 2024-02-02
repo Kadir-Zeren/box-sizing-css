@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Sizing</title>
     <style>
-      .content {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .center {
+        text-align: center;
+      }
+      .box {
         width: 200px;
         border: 5px solid red;
         padding: 10px;
+      }
+      .content {
         box-sizing: content-box;
       }
       .border {
-        width: 200px;
-        border: 5px solid red;
-        padding: 10px;
         box-sizing: border-box;
       }
     </style>
@@ -22,7 +29,7 @@
   <body>
     <h1>Box Sizing</h1>
 
-    <div class="content">content-box</div>
-    <div class="border">border-box</div>
+    <div class="content box center">content-box</div>
+    <div class="border box center">border-box</div>
   </body>
 </html>
